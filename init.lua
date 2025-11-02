@@ -439,7 +439,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = '[S]earch by [G]rep' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
@@ -782,17 +781,22 @@ require('lazy').setup({
         preset = 'none',
         ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
         ['<C-e>'] = { 'hide' },
+
+        -- Accept completion
+        ['<CR>'] = { 'accept', 'fallback' },
         ['<C-y>'] = { 'select_and_accept' },
-        ['<Up>'] = { 'select_prev', 'fallback' },
-        ['<Down>'] = { 'select_next', 'fallback' },
-        -- TODO: fallback_to_mappings is not triggered
-        ['<C-n>'] = { 'hide', 'fallback_to_mappings' },
-        ['<Right>'] = { 'select_and_accept' },
-        ['<Left>'] = { 'hide' },
+
+        -- Navigate completion menu
+        ['<C-n>'] = { 'select_next', 'fallback' },
+        ['<C-p>'] = { 'select_prev', 'fallback' },
+        ['<Tab>'] = { 'select_next', 'fallback' },
+        ['<S-Tab>'] = { 'select_prev', 'fallback' },
+
+        -- Scroll documentation
         ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
         ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
-        ['<Tab>'] = { 'snippet_forward', 'fallback' },
-        ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+
+        -- Signature help
         ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
       },
 
@@ -805,6 +809,7 @@ require('lazy').setup({
       completion = {
         list = {
           max_items = 50,
+          selection = { preselect = false, auto_insert = true },
         },
         keyword = { range = 'prefix' },
         trigger = {
@@ -870,17 +875,13 @@ require('lazy').setup({
           if success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
             return { 'buffer' }
           elseif vim.bo.filetype == 'ruby' or vim.bo.filetype == 'eruby' then
-            return { 'snippets', 'buffer' }
+            return { 'buffer' }
           elseif vim.bo.filetype == 'lua' then
             return { 'lsp', 'buffer' }
           else
-            return { 'lsp', 'snippets', 'buffer' }
+            return { 'lsp', 'buffer' }
           end
         end,
-        -- per_filetype = {
-        --   ruby = { 'lsp', 'path', 'snippets', 'buffer' },
-        --   lua = { inherit_defaults = true, 'lazydev' },
-        -- },
         providers = {
           lsp = {
             opts = {}, -- Passed to the source directly, varies by source
@@ -892,11 +893,6 @@ require('lazy').setup({
             min_keyword_length = 2,
           },
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-          snippets = {
-            opts = {
-              friendly_snippets = false,
-            },
-          },
         },
       },
 
