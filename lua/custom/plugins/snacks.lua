@@ -23,7 +23,38 @@ return {
       },
     },
     gh = { enabled = true },
-    -- indent = { enabled = true },
+    indent = {
+      enabled = true,
+      char = '│',
+      only_scope = false, -- Show all indent guides, not just current scope
+      only_current = false, -- Show in all windows
+      animate = {
+        enabled = false, -- Disable animations for maximum performance
+      },
+      scope = {
+        enabled = true, -- Highlight current scope
+        priority = 200,
+      },
+      filter = function(buf)
+        return vim.bo[buf].buftype == ''
+      end,
+      -- Filetypes to exclude (matching previous config)
+      ft_ignore = {
+        'help',
+        'alpha',
+        'dashboard',
+        'neo-tree',
+        'Trouble',
+        'lazy',
+        'mason',
+        'notify',
+        'toggleterm',
+        'lazyterm',
+        'asm',
+        'text',
+        'neogitstatus',
+      },
+    },
     input = { enabled = true },
     picker = {
       enabled = true,
