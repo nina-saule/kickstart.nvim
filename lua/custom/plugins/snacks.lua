@@ -25,7 +25,7 @@ return {
     gh = { enabled = true },
     indent = {
       enabled = true,
-      char = '│',
+      char = '▏',
       only_scope = false, -- Show all indent guides, not just current scope
       only_current = false, -- Show in all windows
       animate = {
