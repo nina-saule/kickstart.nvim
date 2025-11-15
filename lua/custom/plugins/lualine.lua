@@ -2,6 +2,7 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
+    local triforce = require('triforce.lualine').components()
     require('lualine').setup {
       options = {
         theme = 'kanagawa',
@@ -36,7 +37,10 @@ return {
           },
         },
 
-        lualine_x = { 'filetype' },
+        lualine_x = {
+          triforce.level,
+          'filetype',
+        },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },
