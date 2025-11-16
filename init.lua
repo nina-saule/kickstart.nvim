@@ -1099,6 +1099,10 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
+  change_detection = {
+    enabled = false,
+    notify = false,
+  },
 })
 
 -- Load custom keymaps

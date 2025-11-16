@@ -2,10 +2,9 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
-    local triforce = require('triforce.lualine').components()
     require('lualine').setup {
       options = {
-        theme = 'kanagawa',
+        theme = 'tokyonight',
         ignore_focus = { 'neo-tree', 'alpha' },
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
@@ -38,7 +37,6 @@ return {
         },
 
         lualine_x = {
-          triforce.level,
           'filetype',
         },
         lualine_y = { 'progress' },

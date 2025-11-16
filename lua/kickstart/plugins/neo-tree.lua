@@ -13,7 +13,7 @@ return {
   keys = {
     -- { '<leader>\\', '<cmd>Neotree toggle focus last float<CR>', desc = 'NeoTree toggle', silent = true },
     { '<C-n>', '<cmd>Neotree toggle focus last left<CR>', desc = 'NeoTree toggle', silent = true },
-    -- { '<leader>fo', '<cmd>Neotree focus<CR>', desc = 'NeoTree focus', silent = true },
+    { '<C-\\>', '<cmd>Neotree focus<CR>', desc = 'NeoTree focus', silent = true },
   },
   opts = {
     close_if_last_window = true,
