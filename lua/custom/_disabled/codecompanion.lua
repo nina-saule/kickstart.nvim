@@ -16,13 +16,14 @@ return {
       claude = {
         description = 'Memory files for Claude Code users',
         files = {
+          'AGENTS.md',
           '~/.claude/CLAUDE.md',
           'CLAUDE.md',
           'CLAUDE.local.md',
         },
       },
     },
-    log_level = 'ERROR',
+    log_level = 'DEBUG',
     send_code = true,
     use_default_actions = true,
     use_default_prompt_library = true,
@@ -125,18 +126,6 @@ Example code block format:
             },
           })
         end,
-        gemini = function()
-          return require('codecompanion.adapters').extend('gemini', {
-            env = {
-              api_key = 'cmd:envchain ests/personal/anthropic printenv GEMINI_API_KEY',
-            },
-            schema = {
-              model = {
-                default = 'gemini-2.5-pro',
-              },
-            },
-          })
-        end,
         tavily = function()
           return require('codecompanion.adapters').extend('tavily', {
             env = {
@@ -151,7 +140,7 @@ Example code block format:
         adapter = 'claude_code',
       },
       inline = {
-        adapter = 'deepseek',
+        adapter = 'claude_code',
       },
       agent = {
         adapter = 'claude_code',
