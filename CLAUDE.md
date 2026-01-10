@@ -120,8 +120,13 @@ gri - Go to implementation
 - `gC` - Pick buffer to close
 
 ### Visual Mode Enhancements
-- `J/K` - Move selected lines up/down
+- `<A-j>/<A-k>` - Move selected lines down/up
 - `</>`  - Indent left/right (maintains selection)
+
+### Copy Operations
+- `<leader>y` - Copy line (normal) or selection (visual) to system clipboard
+- `<leader>cp` - Copy relative file path to clipboard
+- `<leader>cP` - Copy absolute file path to clipboard
 
 ### Motion Enhancements (Hop)
 - `f` - Hop to character forward (enhanced f motion)
@@ -159,6 +164,7 @@ gri - Go to implementation
    - `<leader>t` - Toggle operations
    - `<leader>u` - Unit testing
    - `<leader>a` - AI/Agent operations
+   - `<leader>c` - Copy operations
 
 ## Development Environment
 

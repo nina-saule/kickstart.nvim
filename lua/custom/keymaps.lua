@@ -61,4 +61,20 @@ keymap({'n', 'v'}, '<leader>V', '"+P', { noremap = true, silent = true, desc = '
 keymap('v', '<leader>y', '"+y', { noremap = true, silent = true, desc = 'Copy selection to system clipboard' })
 keymap('n', '<leader>y', '"+yy', { noremap = true, silent = true, desc = 'Copy line to system clipboard' })
 
+-- Copy file paths
+local function copy_relative_path()
+  local path = vim.fn.expand('%')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied: ' .. path, vim.log.levels.INFO)
+end
+
+local function copy_absolute_path()
+  local path = vim.fn.expand('%:p')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied: ' .. path, vim.log.levels.INFO)
+end
+
+keymap('n', '<leader>cp', copy_relative_path, { noremap = true, silent = true, desc = 'Copy relative file path' })
+keymap('n', '<leader>cP', copy_absolute_path, { noremap = true, silent = true, desc = 'Copy absolute file path' })
+
 return {}
