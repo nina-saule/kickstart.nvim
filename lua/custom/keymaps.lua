@@ -63,7 +63,14 @@ keymap('n', '<leader>y', '"+yy', { noremap = true, silent = true, desc = 'Copy l
 
 -- Copy file paths
 local function copy_relative_path()
-  local path = vim.fn.expand('%')
+  local absolute = vim.fn.expand('%:p')
+  local git_root = vim.fn.systemlist('git rev-parse --show-toplevel')[1]
+  local path
+  if vim.v.shell_error == 0 and git_root then
+    path = absolute:sub(#git_root + 2) -- +2 to skip the trailing slash
+  else
+    path = vim.fn.expand('%') -- fallback to cwd-relative
+  end
   vim.fn.setreg('+', path)
   vim.notify('Copied: ' .. path, vim.log.levels.INFO)
 end
