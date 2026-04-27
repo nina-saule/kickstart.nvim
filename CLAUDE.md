@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Neovim configuration based on the Kickstart.nvim template with extensive customizations. The configuration uses lazy.nvim as the plugin manager and follows a modular architecture:
 
 - **Core Configuration**: `init.lua` contains the main setup with global settings, options, basic keymaps, and plugin loading
-- **Kickstart Plugins**: `lua/kickstart/plugins/` - Standard kickstart plugins (autopairs, debug, gitsigns, indent_line, lint, neo-tree)
+- **Kickstart Plugins**: `lua/kickstart/plugins/` - Standard kickstart plugins (autopairs, debug, gitsigns, lint, neo-tree)
 - **Custom Extensions**: `lua/custom/` - User-specific customizations
   - `lua/custom/keymaps.lua` - Custom keybindings and shortcuts
   - `lua/custom/plugins/` - Extended plugin configurations
@@ -23,8 +23,8 @@ This is a Neovim configuration based on the Kickstart.nvim template with extensi
 
 ### Navigation and File Management
 - **Telescope**: Primary fuzzy finder with fd and ripgrep integration (uses telescope-zf-native for fuzzy matching)
-- **Oil**: File manager accessible via `-` key
-- **Yazi**: Advanced file manager integration
+- **Neo-tree**: File tree (`<C-n>` to toggle)
+- **Yazi**: Advanced file manager integration (`<leader>zz`/`<leader>zd`/`<leader>zr`)
 - **Grapple**: Project file bookmarking
 - **Hop**: Enhanced motion plugin for quick character-based jumping (overrides f/F/t/T)
 - **Session Manager**: Automatic session management with manual save/load capability
@@ -32,15 +32,14 @@ This is a Neovim configuration based on the Kickstart.nvim template with extensi
 ### Development Tools
 - **Testing**: vim-test with toggleterm integration
 - **Git**: Gitsigns, Neogit for Git operations
-- **AI Assistance**: CodeCompanion with multiple provider support (Claude Code via ACP adapter, OpenAI, DeepSeek, Gemini)
 - **Terminal**: Toggleterm for integrated terminal management
 
 ### UI Enhancements
-- **Theme**: Kanagawa colorscheme
+- **Theme**: Tokyo Night colorscheme
 - **Statusline**: Custom lualine configuration
 - **Buffer Management**: Bufferline with numbered tabs, mouse support, and LSP diagnostics
 - **Start Screen**: Alpha dashboard
-- **Notifications & Utilities**: Snacks.nvim (bigfile handling, quickfile, statuscolumn, input, picker, word highlighting)
+- **Notifications & Utilities**: Snacks.nvim (bigfile handling, quickfile, statuscolumn, input, picker, word highlighting, indent guides, image preview)
 
 ## File Structure Conventions
 
@@ -94,16 +93,19 @@ gri - Go to implementation
 ### File Navigation
 ```bash
 # Find files
-<leader>e or <leader>sf
+<leader>sf
 
 # Live grep
-<leader>g or <leader>sg
+<leader>sg
 
 # Recent files
 <leader>s.
 
-# File manager
-- (opens Oil in current directory)
+# File tree
+<C-n>
+
+# Yazi file manager
+<leader>zz
 ```
 
 ## Custom Keybindings
@@ -134,15 +136,6 @@ gri - Go to implementation
 - `t` - Hop till character forward (enhanced t motion)
 - `T` - Hop till character backward (enhanced T motion)
 
-### AI Integration (CodeCompanion)
-- `<leader>aa` - Toggle CodeCompanion chat
-- `<leader>ad` - Add to CodeCompanion chat
-- `<leader>ap` - Open CodeCompanion actions
-- `<leader>ai` - Inline CodeCompanion
-- `<leader>aq` - Quick command
-- `<leader>as` - Quick ask CodeCompanion (prompts for input)
-- `:cc` - Command abbreviation for `:CodeCompanion`
-
 ## Configuration Patterns
 
 ### Adding New Plugins
@@ -155,6 +148,9 @@ gri - Go to implementation
 1. Add server to `servers` table in `init.lua`
 2. Install via Mason (`:Mason`)
 3. Configure any server-specific settings in the servers table
+   - Each entry is registered via `vim.lsp.config(name, cfg)`; `automatic_enable` from
+     mason-lspconfig 2.x calls `vim.lsp.enable()` for installed servers.
+   - Common capabilities (blink.cmp) are applied via `vim.lsp.config('*', ...)`.
 
 ### Customizing Keymaps
 1. Add to `lua/custom/keymaps.lua`
@@ -163,8 +159,10 @@ gri - Go to implementation
    - `<leader>s` - Search operations
    - `<leader>t` - Toggle operations
    - `<leader>u` - Unit testing
-   - `<leader>a` - AI/Agent operations
    - `<leader>c` - Copy operations
+   - `<leader>g` - GitHub (snacks picker)
+   - `<leader>h` - Git hunks (gitsigns)
+   - `<leader>z` - Yazi
 
 ## Development Environment
 
@@ -177,11 +175,6 @@ gri - Go to implementation
 - **Session Management**: Automatic session save/restore (disabled autoload, autosaves on exit)
 
 ## Additional Notes
-
-### CodeCompanion Configuration
-- **Default adapter**: Claude Code (ACP adapter) for chat, inline, and agent strategies
-- **Memory system**: Reads from `~/.claude/CLAUDE.md`, `CLAUDE.md`, and `CLAUDE.local.md`
-- **Credentials**: Managed via `envchain` for security
 
 ### Bufferline Features
 - Numbered buffers for quick jumping (`<leader>1-7`)

@@ -37,10 +37,6 @@ vim.o.showmode = false
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect', 'noinsert', 'popup' }
 
--- Use system clipboard for copy/yank operations, but don't override it when pasting
-vim.opt.clipboard:append 'unnamed' -- use * register
--- vim.o.clipboard:append('unnamedplus') -- use + register (not needed on macOS as * and + are the same)
-
 -- Preserve clipboard when pasting in visual mode
 vim.keymap.set('x', 'p', '"_dP')
 
@@ -106,8 +102,8 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.tabstop = 4
     vim.opt_local.shiftwidth = 4
     vim.opt_local.expandtab = false
-    vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
-    vim.cmd 'iabbrev dl :='
+    vim.opt_local.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
+    vim.cmd 'iabbrev <buffer> dl :='
   end,
 })
 
@@ -173,7 +169,7 @@ vim.o.backupcopy = 'auto'
 vim.o.backupdir = temp_dirs.backup
 -- Save undo history
 vim.o.undofile = true
-vim.o.ul = 500 -- undolevel
+vim.o.undolevels = 500
 vim.o.undodir = temp_dirs.undo
 vim.o.viewdir = temp_dirs.viewdir
 vim.o.conceallevel = 0
@@ -361,7 +357,6 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-        { '<localleader>c', group = '[C]pilot', mode = { 'n', 'v' } },
       },
     },
   },
@@ -435,7 +430,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>e', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
@@ -711,20 +705,18 @@ require('lazy').setup({
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+      -- Apply blink.cmp capabilities to every server, then register per-server
+      -- config. mason-lspconfig 2.x with `automatic_enable = true` calls
+      -- vim.lsp.enable() for installed servers automatically.
+      vim.lsp.config('*', { capabilities = capabilities })
+      for server_name, server_config in pairs(servers) do
+        vim.lsp.config(server_name, server_config)
+      end
+
       require('mason-lspconfig').setup {
-        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+        ensure_installed = {},
         automatic_installation = false,
         automatic_enable = true,
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
       }
     end,
   },
@@ -947,21 +939,6 @@ require('lazy').setup({
       -- - sr)'  - [S]urround [R]eplace [)] [']
       -- require('mini.surround').setup()
 
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
-      local statusline = require 'mini.statusline'
-      -- set use_icons to true if you have a Nerd Font
-      statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function()
-        return '%2l:%-2v'
-      end
-
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
@@ -981,7 +958,6 @@ require('lazy').setup({
         'typescript',
         'jsdoc',
         'json',
-        'jsonl',
         'lua',
         'luadoc',
         'luap',
@@ -1061,7 +1037,6 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
