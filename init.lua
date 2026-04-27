@@ -968,81 +968,70 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    version = false,
-    event = { 'VeryLazy' },
-    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
-    cmd = { 'TSUpdateSync', 'TSUpdate', 'TSInstall' },
+    branch = 'main',
+    lazy = false,
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-    opts_extend = { 'ensure_installed' },
-    keys = {
-      { '<c-space>', desc = 'Increment Selection' },
-      { '<bs>', desc = 'Decrement Selection', mode = 'x' },
-    },
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-    opts = {
-      matchup = { enable = true },
-      ensure_installed = {
+    config = function()
+      local parsers = {
         'bash',
-        'c',
         'css',
         'diff',
-        'fish',
         'html',
         'javascript',
+        'typescript',
         'jsdoc',
         'json',
-        'jsonc',
+        'jsonl',
         'lua',
         'luadoc',
         'luap',
         'markdown',
         'markdown_inline',
-        'python',
-        'printf',
         'query',
         'regex',
         'ruby',
         'rust',
         'toml',
         'tsx',
-        'typescript',
         'vim',
         'vimdoc',
         'xml',
         'yaml',
-        'zig',
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = '<C-space>',
-          node_incremental = '<C-space>',
-          scope_incremental = false,
-          node_decremental = '<bs>',
-        },
-      },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        -- additional_vim_regex_highlighting = { 'ruby' },
-        additional_vim_regex_highlighting = false,
-      },
-      indent = { enable = true, disable = {} },
-      endwise = {
-        enabled = true,
-      },
-    },
-    -- There are additional nvim-treesitter modules that you can use to interact
-    -- with nvim-treesitter. You should go explore a few and see what interests you:
-    --
-    --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-    --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+        'sql',
+      }
+      require('nvim-treesitter').install(parsers)
+
+      local function try_attach(buf, language)
+        if not vim.treesitter.language.add(language) then
+          return
+        end
+        vim.treesitter.start(buf, language)
+        if vim.treesitter.query.get(language, 'indents') then
+          vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
+      end
+
+      local available = require('nvim-treesitter').get_available()
+      vim.api.nvim_create_autocmd('FileType', {
+        callback = function(args)
+          local language = vim.treesitter.language.get_lang(args.match)
+          if not language then
+            return
+          end
+
+          local installed = require('nvim-treesitter').get_installed 'parsers'
+          if vim.tbl_contains(installed, language) then
+            try_attach(args.buf, language)
+          elseif vim.tbl_contains(available, language) then
+            require('nvim-treesitter').install(language):await(function()
+              try_attach(args.buf, language)
+            end)
+          else
+            try_attach(args.buf, language)
+          end
+        end,
+      })
+    end,
   },
 
   {
