@@ -34,6 +34,10 @@ vim.o.number = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
+-- Default 'popup_setpos' makes right-click pop up a context menu; 'extend' removes it.
+-- Left/right mouse drag still selects text (copy the selection with <leader>y or "+y).
+-- To disable the mouse entirely (Zellij/Ghostty then handles selection + copy): vim.o.mouse = ''
+vim.o.mousemodel = 'extend'
 
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
