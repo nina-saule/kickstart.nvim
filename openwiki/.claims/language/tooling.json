@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:6a6fd1b5e9da9de69e1e492ee4d96bcadc4de28b5bb818f9438e1f4843c7d43a",
+  "claims": [
+    {
+      "id": "claim_0bb7531936d04f0c97d904e864dabefd",
+      "statement": "The active LSP configuration uses nvim-lspconfig with Mason, mason-lspconfig, and mason-tool-installer; it configures gopls, rust_analyzer, zls, jsonls, and lua_ls, derives the Mason install list from those servers plus stylua, and enables installed servers automatically.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L495-L510",
+          "version": "repo-lines-v1:sha256:0b455ca1f742e46e95937ad9c418525d90a4d994cd232ec2bb9d77d25fb356df:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhY2Y2ODhmMzJkNjNmMjRhY2FjMjM1ZDdhMGFhNGZhMWFjODkwZWJkYzRiNzFhNGQyMzNhNTlmNzEzZWNiZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlZjlkMDEwZjViM2M1Y2UyMjhkNDRmNDc5YzhjYjI3MTM4ZDZjZDUyMWU0NjM3NzQzMGFjNTUyNDZkODUzYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlZjViMTZjOTc4MGNhNzI2YTM3ZjhmMDk4MDkwZTY1MjFjMDkyMDVlZTFiNWEyODRhODZhY2EzODZlYzZiYTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YzM0NWZiZWUxNTI2MWRjODFjOWEzNjY2NjFmZjAyZWU3ZmFkYzAzZjAwN2EwZTc5MjgzMGFhYjYzZmU5MzkifQ"
+        },
+        {
+          "resource": "repo://init.lua#L663-L704",
+          "version": "repo-lines-v1:sha256:9187799160253986fee8dd0e9796d4cb5ed96287bfc84b29a1e8040f6f55fd73:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyNDk2Nzc5ZWVmZDdmNzY3OGUyZTdmOWQyYThhOWY4NTA1MWY3N2RiZTIwZmRmNWMwZDNhNGNhMTczOGFmZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYTU3NWY3NTRiMzg4YTg3ZGFhZTI0OTFkZWM2MmE4NjBmM2RmNmU4ZTlkNDFjN2U2OTc0NmE3YTRjOWQ2MTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhZTEzZGI3OGI0NmE2YWZjYmQ0ZTI4YWEwZGZkYjg2MzBmOTMzNTQ1NmMxYzlmZDEzOWMzMTI5MDZmMGQzZDUifQ"
+        },
+        {
+          "resource": "repo://init.lua#L706-L737",
+          "version": "repo-lines-v1:sha256:80f4ca1e8081d217b18f9b07e81cd833a4967495c140bf4cae04e7fe4737dd5e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkODViNzFiNTZmNDNiYjBlZDZiMjlkYjdjMTVmMGRmNjhjY2E0ZWNhNGNmYzYyZTg0OGI4MmNkMzUzZjk0MzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlYjAyZmExNDY0M2U3MDIzNmMwYzhmZmYwMmY5NGNlNTlkOWZmYzNjYTUyMDg1M2U1YjhiMmY4ZmYwYWRmYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhNWM1OWRiNjZhMTA1MGY3YTA0MDQyOTM3MzNmMGY3NWUxMTVlYjc3OWIwNmVmMWRiYzVhMDUwMjZhMjZkNTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c097dd11697f4fc4a6f3f9b98cb94ef6",
+      "statement": "blink.cmp provides completion and shares its capabilities with every configured language server; LSP attachment adds buffer-local navigation and refactoring mappings, with inlay hints enabled only when supported by the attached server.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L511-L559",
+          "version": "repo-lines-v1:sha256:f4733b21c1d900f89933a7eeda13502ca5989af496b6df01fe87aa75d53053ad:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2YjA1NTBiN2E2ZjI3OWVmNTViNjlmN2U5ZTdhMTMxOWIxNzEzZDc2MDYyMDhjMTllMGY3YTAwOTQxZTcyMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2YmIzMWQzZTExYTQzOTJhZDdkOGY1NTFkNTcyNDhlYTAyZTM3MGM3OTA1ZWM1MmEyOGYwZGIyYWUyZDYyZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwMWJhYjA5MWRiMGNkNDFiM2E2NjRlOWVjYjVmNzcxODk3MjVlODdlM2M2MGViMTMzYmNiMWQ5ZTY4Nzk5MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc5OWRmMmRmZDg4NTNjZWExNzJlZmVmY2M3N2M5YTFiNjFlZDAxZDlmZWE5MDQ4Nzg3YzY4OWYxZTdkOTE3NmUifQ"
+        },
+        {
+          "resource": "repo://init.lua#L607-L615",
+          "version": "repo-lines-v1:sha256:60fcbfa971d92706ad09373f7a11d87b5ca180b07b65212021648021f064ab52:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGQyNWZiMTQzYjEzZmQwNTUxZjNiNGU3MzdkNzZmOTIyMTgxNjU3ZjhjNWQxMjg4NmJiZjZkNzBiZTliZWYyMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ0ZWJlMDMxOGU3ZDE0ODU5OGMzZTk1MmFkOTgxZGZlMWUwMWZjMWZjN2FjODM0N2ZmNjdiMmY4YjFiMmE3NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmI2NmUwNDlkMTM1ZThhMGE0MjQzNTJiZGI1MjdmMTEwY2FhMDUwZDU1Y2I2MmQxNDljZjlmZDZlZjEwOWNmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzYyYTg3MWI3ZDI3Mjk5YWUyNmE0YjY1YmFlZDI3MWFjM2ZlYmRlNzczYzZjNDE3OWUwNzU2NzM1MDEzNTllZSJ9"
+        },
+        {
+          "resource": "repo://init.lua#L657-L661",
+          "version": "repo-lines-v1:sha256:7d9938c99f3d228042e5226b3f444d03259b06788fe870fcac24e106cbc0eb1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2YxZDcyYjFkNTUyNGQ2OTliZmRlYmQyZmRiNzY0MWU0NmMzZWY5ODFhYmNjNjA3MzY1NjA5OTEyM2ZmODBmNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODY0NzI1NmRkNTMzMDRjYTNkOWZkNGEwYjM1ZWE3NTMzOGY3YWE4ODBiNmFjNTc4OGE2ZGYxMjAwNTY2Y2YzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmViMDJmYTE0NjQzZTcwMjM2YzBjOGZmZjAyZjk0Y2U1OWQ5ZmZjM2NhNTIwODUzZTViOGIyZjhmZjBhZGZjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzY2NDczYjNhNmE4OThhYTk0ZDk1Zjk0NmVmNzViZjY5MWQxZWNlMTg3NTU1YzMwMzAwNWFiNjI2ODBhOTQxOSJ9"
+        },
+        {
+          "resource": "repo://init.lua#L725-L731",
+          "version": "repo-lines-v1:sha256:b9229bec3fc017138d51ba010331acfd0ef03b563e1fdf704efbc6f6941d3c24:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjYyNGIxZGIxNjMzZTVhMjdhOTM4YzJiMTU3NTlkYjhiYTY1YTQyYWNhYWZjODFiMTQ5ZmYzMzhjOGQ4NTRjYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDU3ZGRkMTg0NDc2NzNkMGE3ZjM2OWQ2Zjk2YjY2NmM0ZjczYzg4ZDY0ZjlkYmUzY2EyMjgzNWNjZjhmZjc1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWU3MGJmMDBiYmRlZGUwYjk4ZGViZjZkY2I1ZjcwZDQwMTBhMDgxN2U0ZTFmYzNkZTI1ZGI4ODViZTNmOGI5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTY0ZDE3NDZjODI1NTk2NmE2MTQyMmY1MDhmYmU2MjJjNWEzMDNiZTlmNTcyZjY0ZmIwMjNiNjJhNGRkYjU1MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec5da930e9ea405ab22de857b7264461",
+      "statement": "Conform formats on save with a 500 ms timeout and LSP fallback, uses stylua for Lua, skips automatic formatting for C and C++, and exposes manual formatting through <leader>fb.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L741-L780",
+          "version": "repo-lines-v1:sha256:2855d623b351a7bbe4c1420b9b59702974904c930a0b666d2f956eb3a8956710:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVmNTNlMzQ4ODJkMjg3NjllNWRiNzc4MjEzN2MzOGY0NTUyZjZkY2JjMjkxMzZhODY3YWVkNTFhN2ZjYjgxYzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhNWM1OWRiNjZhMTA1MGY3YTA0MDQyOTM3MzNmMGY3NWUxMTVlYjc3OWIwNmVmMWRiYzVhMDUwMjZhMjZkNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ5NDAxMDM4YjI2MGQzZTVjNWVhYTY1ZDU1OGZjZGFlMTg1NzA2OGNiM2IyYjgwZjRmNWY3MjYxZmUwYjliZDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5df1722066740478e3a46861c582163",
+      "statement": "nvim-lint currently runs clippy for Rust on buffer enter, after writes, and when leaving insert mode for modifiable buffers, with <leader>l available for manual linting.",
+      "evidence": [
+        {
+          "resource": "repo://lua/kickstart/plugins/lint.lua#L3-L11",
+          "version": "repo-lines-v1:sha256:e1fa58f611075997e006560ab55cf64ebb5a8700eb708905311a4305d852a54b:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkMzVjMGNlM2YyMDBiYThiMDMxODczODhkZTdiMTEyZjQ1Mjc5ODNiZGI5Mzk0NDQyNmE2YmIxM2MwZmI0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI2MmY2MGQ4NTkwYTU3OWNmNDZmOGQ2NzM3OGM0YzU3MmI5NjJjZWNjZGI5MGM3YTVmN2I0MmI5NjA3ODJhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDdkYTAyNTAzMDAwZTE2YzEzYjc1YTc2MzI3N2I0OTQ3M2FiNjFjMDhiMGU4OTllMWE3YWRkOTdlN2JmMjRhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWVhZDViYzk4ZDlkOWVjOWQ4YjZjODNiM2EwY2I2MjM4NmZlZDgzM2E0YTg1OTczNGIyZDU3NDI2YzY0YTc4ZCJ9"
+        },
+        {
+          "resource": "repo://lua/kickstart/plugins/lint.lua#L45-L62",
+          "version": "repo-lines-v1:sha256:21b92b3824bf7bcbd2d5a7212951f1812721bfc00470016a3ef99456efd6cfb2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMGUxMDdjMTMzMDA1MjhkYzUyNWQwNjZiYjNmYWU1YmI5ZTNiMThhOTU5OWMzYjk2N2Q4NzU2NTcxMTA3OWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjNzlhZjViZjY3ZWU5MWFkYjg0N2JkYmUxODVmMTQ1M2UwOTQzY2YyNDRlMDRmYmE4OTFlNTQwZmYwZjg4YTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE5ODkyNWE5NTZkNjliNmU1NmEwODNiYzE0MGYwZjIwYjdkNzlhNjhkM2U5NzEzODc4MjUzNmJkYWEwMTIxOWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzNDAyM2EzMTBlYTAwOTg1OWVmZmY1NWYwZDdlOGJmMmYzNTkwOWFiMzE5YzM5M2NlZTY3NjVmODFjNTg5YTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf12270b17f544b0a2f7f88d2749f2e6",
+      "statement": "Tree-sitter installs a configured parser set and attaches parsers on FileType, installing an available parser before attachment; the context plugin is disabled by default and exposes <leader>tc for toggling.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L1037-L1046",
+          "version": "repo-lines-v1:sha256:4caa7be870c2ad37657af82c45393c65143956a5d574569688e9268423b4261f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxMTFmMjM5YWM2NWM5ZmVjZDRmNzk3NWQ0ZWUwYzY3N2I1OGE4ZWE2Nzg1MmVhMjVkMjc5MjM5MjUxOGQyZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMGNkYjk3MmE3YmZiN2VkMjQ2ZjlmZjY3MjM4NWU1NWY0OTY4ZmMxMTA0M2RjNWI2ODRkNTFkZmEzMWRiY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhNWM1OWRiNjZhMTA1MGY3YTA0MDQyOTM3MzNmMGY3NWUxMTVlYjc3OWIwNmVmMWRiYzVhMDUwMjZhMjZkNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmYWZmMGNjNWE0YjQ3MWM2YjBiOGE5OWE5YTYwYjAwNzRjMGE4YmI1MWVjZGVjNGYwNmM2NTlkNjc2M2I2MjAifQ"
+        },
+        {
+          "resource": "repo://init.lua#L970-L1033",
+          "version": "repo-lines-v1:sha256:e3a2f25e42b49a2ea5001b48376d0fb53f72cb5aa5ce457c0675c6f34dde3a4b:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4OGQ0NDU2Y2ZmMjRiYWIyNjZlNjI5NjY4NzkxODRkNzFiMDU2NzQxNDdhZDVjOWZkMjNlYTJiMzE3MGE4MDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MzU1MmFiNTcxNDk0YjM5OWIxODE5OTYyMmRiZTNiMzgyNmViNjFmY2QxZjc0Y2ZiMTJhYmNmODhlNGY3MjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMzEyNDA3MTU1MzVlYTQ2MmRjOGU1NTc2MTQzMTcwZjBjNTFmYWI0NjJkMWU0Y2I5ZDA4Y2UwY2U2NGYwOTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhNWM1OWRiNjZhMTA1MGY3YTA0MDQyOTM3MzNmMGY3NWUxMTVlYjc3OWIwNmVmMWRiYzVhMDUwMjZhMjZkNTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1bfe9d914e964250ba8adab306eecba0",
+      "statement": "vim-test runs nearest, file, and last tests through ToggleTerm using <leader>uu, <leader>uf, and <leader>ul; the Go-focused DAP module ensures delve but is not imported because its require line is commented out in init.lua.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L1058-L1067",
+          "version": "repo-lines-v1:sha256:a3b2bf0705db965ccbaa49374443a1efd7fb4697c4a867a48981e80c7666e463:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyMTdhYWE3NzVjZjA1MjY1NTZmMGYwZDJlMjM3ZWE2OTZlMDEzNmU2NjQ0NjEyMTExMWJjYzdjNGI4MmY4NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwM2NlMWJmNzQ1YzA0MzZjM2YxMjRmNzFiOWE1YjIyNzNlY2U1YzI5MGYwYjFiNWY2NGY4OGNhNDcyNTU1YWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExNDRhMmY2MWI3ZGM2NDdiMzU2NTg0NTM0ZThiMjg5NWM0YzdlMmUyYmU0OGZkZGIwZmE1NjUwZWEzOGIzZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhZjhkNzU1MzFlNTEzMDAzZTg3MWEzN2UzMWU2NDJlOGE3NWEwZTc2MzlhYzM5NGRmYjU0Y2IxOTAzNWE0OTIifQ"
+        },
+        {
+          "resource": "repo://lua/custom/plugins/vim-test.lua#L1-L16",
+          "version": "repo-lines-v1:sha256:c9519fc4709b826f046330c61f0ab205fb3660da99bb976c72d92e37fa368fc9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkMmE2MjcyOGEyZDY3MDBmNmYxNTE0ODY3OGE3ZDE4ZjQ0OWJhMWViNGY2Njc4ZmZiODA5N2RhZWU4NDk1N2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://lua/kickstart/plugins/debug.lua#L84-L98",
+          "version": "repo-lines-v1:sha256:7fd28bcda47581490ec6bde350da1e18e88bc4409a423cce34277331917bf1c3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2OWUxMTlmNTRjOGJhNzQ4YTNhNDFkYjBjZDZmZjNlYzdhZWZiMzI3ODAyZmUwODJlMGY0YzY2ZWZhMWJkYmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NzhlMjUwM2I4Y2YzN2EwNmY3ZDZmMGEzYTZiNmZlMzU2OTFmYmNhYjUwYjg3NzVjYWI2ZmFiYzcxYzU5MmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhYTg1NzVjNmFjMjI0YWU5NDc3OTgzYTRhZGIwMTJkYzliODhjZTQ2MTgwNzdiOTRlYTNmODM5Yzk4YzMzYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMTk3M2YxNDA3OTJmYmZkYjM5ODRjMTlmYjU2OTQ0MGY0MWIzYzI2MTI5MmU1NzAyZGI1YTgzOGNhNzg1YTgifQ"
+        },
+        {
+          "resource": "repo://lua/kickstart/plugins/debug.lua#L9-L26",
+          "version": "repo-lines-v1:sha256:355ca3282ca8071d8644be34e8545f4e96e591366e97adc0be8d31b9c4178935:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkMmE2MjcyOGEyZDY3MDBmNmYxNTE0ODY3OGE3ZDE4ZjQ0OWJhMWViNGY2Njc4ZmZiODA5N2RhZWU4NDk1N2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyNDcxYWI1MmM4ODViMjYzZjE2ZGVkZDE5MzA0YmMwZjUzN2I0OThlZWYwNmUzZTUzNDZiODBhNGRmYTVlMTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMGNlMWVjMWRkYmRiZmExMzZiOGM0ZmZkOGJjYThiODFhODJiNmFiNDExZDczM2NmM2IyMTI0ZGI1ZTQ3NmEifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-10-02T19:21:58.828Z"
+  }
+}

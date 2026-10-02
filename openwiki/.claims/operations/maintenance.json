@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:9c4b967ea7ec9b2e593009fc748036f88919b05738290c07f2e844eac5135512",
+  "claims": [
+    {
+      "id": "claim_2f89ee79b5754bf19735c9031caee933",
+      "statement": "The repository uses .stylua.toml to define 160-column Lua formatting, Unix line endings, two-space indentation, and single-quote preference, while the Stylua GitHub Actions job checks pull request head code with stylua --check . on pull_request_target.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/stylua.yml#L1-L19",
+          "version": "repo-lines-v1:sha256:27e1b0d7e26c6ea469f43de0e38818c4f71bdae9eed921a1976d1a4d37d0e3b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkYzZiY2YzODEwN2VlNjg3ODMxYTA4YzdhN2Q3ODkwODE3OWRlMTk1ZDI2MjY2ZTRmYTFhYWJlYjk4MWZjMmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhMmM2OTQ1ZDQ2NzhjNDllYjI1NjY5OWJhNTY5MDJlMTNlN2QzMDk1NGVlZGNmNzE3NTBhZjUzY2RlZjFjOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        },
+        {
+          "resource": "repo://.stylua.toml#L1-L6",
+          "version": "repo-lines-v1:sha256:388d6f90b4867fdb3b7e38ff8739a32ee45623dae3523c0c6463d5011eb0ea0f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTM4M2ViMjAxYTFiNDQ2YjIyMjQ1MWVlY2E1YjBiY2Y3NjM0YTExZDE3MjNiY2IyMzA0OTJmZGE2ZWYyOGM2ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYxMmEzYjE5OGM3NDQ4NWU0ZjY4Mjc2ZjNhMzFmOWFhNTgxNTA5MDY0Yzg3OTVjZmUxYWZkN2E1MGM5ZmJhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6207fcc46a714188bbfee84c1443e4a6",
+      "statement": "The OpenWiki workflow runs manually or daily at 08:00 UTC, uses a full-history checkout and Node.js 22, installs pinned OpenWiki/Mermaid/jsdom packages, and runs openwiki code --update --print with credentials supplied through GitHub secrets.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L1-L48",
+          "version": "repo-lines-v1:sha256:7bc02444069072313e164c8399d54ffa6f201df0af465929ce2355aa0ec6b0fb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2MDI3ODdhZjZkY2MwODM0ZGUxMjFjYmIxY2I5NWY5NDU5YjcyMWVhYjAzNDlmMTA1MDFiOTk2YzFjNzdmZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ZjhiODAyNzQxYWZjN2ZiMzg0MGZlY2RjNDNkN2Y4ZTQwMjNiYmZjYjViN2VjNjVlZTA4ODc5OGQ4NTE3MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ZTc5NGRkZjMyYTNlMmRhYWFkODgyNjMxM2MyNGY0ZTRjZGE2ZjYxYWJmNDE3ZTQ4OWJlMzlkNWI5OGE1NTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4894c34ec2264f39a690e6981a1f9d99",
+      "statement": "The OpenWiki workflow removes transient run state, creates or updates the openwiki/update pull request with OpenWiki and agent guidance files, preserves completed pages when an update fails, and propagates the OpenWiki failure after pull request creation.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L50-L88",
+          "version": "repo-lines-v1:sha256:8a16c25992e382f80a5b31b3d85e8d23224696724c52368fb8e668084ee2430c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3OWM4ODBmNjJkNDIyNTM4YmNhODRjYjU1ZWNlOGZlMTBlOTY1OGIwNjExMTVjM2ZhYmNkYzdiM2JlY2Y0NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2NzE4ZjA2N2I1ZTVjMWYwOTkxYTZlNzQ3MjZmZTJhMjNkMjY0MzQ1ZTA4ZTRlYWQwNGZhZjczYzI3ZWQ0NDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxOTEzNzMyNTgyYzNlNjAzNTkwNzg2Yzg2ODM2OTUxZmYzNWU5YjJkMGY4ZDMxMDY3ZDRmNGM4NzQzZGIyYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a7853236c3494e3e8b022b8925767bf5",
+      "statement": "AGENTS.md and CLAUDE.md provide agent and repository guidance, including OpenWiki retrieval behavior and stable Neovim extension points; they are not imported by init.lua at runtime.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L1-L16",
+          "version": "repo-lines-v1:sha256:8926524de63a1266e7592d9f1256ec367b67e9fa0583f343808e3e51f19d4990:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVmMTgwZjljMTI2OTAzYmNjMzMxYWE5NTQ1NmU0OTQ0NGE3ZDRkMDExZThhMmE4M2Y1ZGM4NzAyMzkxODEyZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5Zjc4NzE0ODkzYWE3Nzk0MmNlYTFjNGEyZTAyMzFkYmI3ZmEyYTQxYTcwYzgxNDYwYTNjNjc1NjJkYTNhYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://CLAUDE.md#L1-L27",
+          "version": "repo-lines-v1:sha256:c6857d3cae0d8f40e5ae3bdebaf6be7469ae020a5673653c4179560352668a4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1NTg1YzdjNmNiMWM5ZmUwZTc0NDdkYzQ0MTkyNWY5YjRlOWM2YTIyYjZkZTU3Y2ZmYTNiNDIwMDA2NDliYmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiMjA0MGRkOWQ1NjNjZmQzZGY5NmZhMjg3ZGYxZDJkNjgyZjYxMDhhZDI5ZmFmYmJkZjcwNmYzNzZhZTk4ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMWJjNWJjNGEyMzdmNTc4ZTZhZjRhNDE1ZDA2NDdmOTkxMGIwM2IzNjRlMWUyN2MxZjFkYmFhNzQzZDAzYmEifQ"
+        },
+        {
+          "resource": "repo://init.lua#L1063-L1074",
+          "version": "repo-lines-v1:sha256:bc778efad85881edf437869a9d95588ca7e1c3118dd9fca032eff51a86188eff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYzI1OWQ3ZDA5MGQxNDNlZWYzMDg4ODc0MDU4MzgyOTEzYTJhNTc3NmRlMzVhNmQ5ZjZkNDU5YmM5Mjg2ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5NGM3NzczZmM5OTg4NzIzZWEwMDNjMWUyYTYzODQzMDM0MmQxMDljNWM5MzI2NmI0NTcxZjcxMzFjODA4Y2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljNjNmYzRjZmY2ODAwM2FjMGFmZGE5M2I0YzkzNzBhYjY2NTIzOGU5MTYzN2JmMzUxZGE5MTc4OThiZTcyYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZjI0NWJjNTc3ODFjZDc1NjE1MWZjZWZiNDc2N2FmMzVjM2I1MzM5Yjk2MTE3ZGM2MGY2NWM4MGQ0YTk2M2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b558f18ee3cd442597d3db6c91a39d7a",
+      "statement": "The repository's .gitignore lists lazy-lock.json among ignored paths, while lazy-lock.json records plugin branches and resolved commits when present.",
+      "evidence": [
+        {
+          "resource": "repo://.gitignore#L1-L7",
+          "version": "repo-lines-v1:sha256:b223c33bf39cc59b36b605104653aacede84491c6efd30346addd028c7d2f5b2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGYyMWVhZTgxMGFlNTZiMTYyYWEwNTFiZDUwMDFhYzhiYzU2NzAxYjFlMmIwMTBlYTBhMjUzNDFiZmZlODk2ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwMzlkMjlmNTM0M2ZlNDMyNmE5ZDhiZDAzNTdkYmY5MjlhNGRkZmNlYWRhYmEyMzM2MjhhYzgyZjdiYTkwZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://lazy-lock.json#L1-L5",
+          "version": "repo-lines-v1:sha256:4fe9dbdad4f0fbf4b8b4e6cf7a6051bd5e491e9beba035b269da140be9d7186f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTZmYjA4ZmRhMWFjYjk1N2I2MTE2YmQzNzgxMWExZmU0MWEwMTYxMWMwNjMxZWRiZjc4NmQ2ODg5YTI3YTU1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxOTNkNjk5OTE5OGI3M2M3ZGExYzkwZWM1Y2MzODRiZDY3NGUxZWY1YmJlZjkyNmI5NzZjMGM1OGMxM2JkZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGNmYTY3Y2I5YmMyNTk5NWRkY2YxYzdiNzA0Y2VmYjc4OWJhY2RmY2Q2ZDM3ZWZhMWVjYTE4ODM4NWZhZTI0OCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-10-02T19:21:58.828Z"
+  }
+}

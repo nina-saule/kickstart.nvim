@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:228c88533be5207cfabb24ca09d078b47afa6b49a4d1338a6c5e0a5551ab0dae",
+  "claims": [
+    {
+      "id": "claim_a68ea4f6824b4ea8877b1366c28670b6",
+      "statement": "Neovim starts in init.lua, which enables Lua module caching, sets leader keys before plugin loading, applies global and filetype-specific editor options, and registers global keymaps and autocmds.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L190-L235",
+          "version": "repo-lines-v1:sha256:54a688dfa42a510f3bfd2f37fc807c1412e11f665291015826be554a72a4f93a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNjlmNTAzYWY4OTlkMTlmZGVjYjA5OGUyM2E4YWZkYzFiOGVjYzU4ZmY4NjY2N2YzYzA3ODQyMGNjMjc4YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiYjhkNTc1NDBlYWM0MGRhMmM0ZjU3NWVlNzJmY2Q3OTg1MmU3YTVhNjRmZmU4YTk2YjljNTFmZWIxZGM0ZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlY2YxYjdjODgxNTA3MzNmMTI1MTE2ZTZmZGM2MjY0NjE3OTIzM2FhYjVmMmUwMzQzMmRiYTRhMDVmM2M0MWMifQ"
+        },
+        {
+          "resource": "repo://init.lua#L9-L16",
+          "version": "repo-lines-v1:sha256:9080a676f98698904ebd8729fc7c6003528d45422c60129e809a2770d7b76654:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTU2MGYyYTMwYWQ4NzAyZmE2ZGI2OTA3MzgyN2M1N2Q2YTc2MzQyY2JhZTU2NGI3MTVlNWRhZjI3MmZjMTYxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmY2OTNhMWNjZjU1MTA5ZGFhYzAxN2NhNWZhZTQ5YzIyMGJhOTMzOGE0NjM4ZWU2MjZlMDc4MGFlZDE3NDIwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTE2OGVhZmE3NDk0ODIwMTZmNmU4YzA4YmZmY2MxZDczMzI0MjEwZmE2OGY5OTg4MjgyNjUzZTA0NmYxNGQ2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWYwMDQxNWRmYjlhNzU0NTllYTIxM2QxMzM2NzBlNDA4MDZjNzlmNzJiNmI2MmEyYzUwYjRkM2IyNmMzZDVkMSJ9"
+        },
+        {
+          "resource": "repo://init.lua#L96-L146",
+          "version": "repo-lines-v1:sha256:6b60d52d54722d5aa685e7413d49b96ee2f30c6250e1be1b1cdd778e0cf4cc41:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1OTA4NWE1NDRjMDc3MGRlOWVlOTNjYjRmMTdjYmY0YTdiNGFmMWFkYTJiNzVmZDI1YmI2Y2RjZThkZmU1OGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyNThlNTViMDY0ZDE3ODk5NjQ5YjgwZThmZGVlZTliM2U1Zjk4NmY5NWZkZjRjM2Y1MTIwYzYzYWYzMWFiZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxNTRjODg1OWNlN2ViZDYxNmIzY2RhM2U0MmRlY2E2NDI5ODg3OTkyNjM2MTg4YzFiZmQzNTk5OTUyMjM0N2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_40e13ef682ef4cd283449a51c4585a29",
+      "statement": "init.lua bootstraps lazy.nvim in Neovim's data directory, prepends it to the runtime path, and raises a startup error if cloning the plugin manager fails.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L237-L250",
+          "version": "repo-lines-v1:sha256:9f25d13456b7a215fb7c07ccd5048ba53919d30cee2d3d12d4b18e984869bcdc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhMzRjYWNiYWEzMzg1NDZkYjliMDgzN2EwZmE0MzllMGQ2M2VmNDE1ZmFkODgwMGU3MmM3YWQ0MjRlYTNlYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0ZjI4MDU0YTk1MmUwODFkNDQzYmU0YTAzNjI3ZjdmNDY2YWJmNWU0ZWVmYTM3MzY5OGM5MWIyOGJkNDAwYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhMGY3MjczZDE4MzFlMzI0YjI4MzkxMDNjZGY1NmRhMjZmMjk3ZWMyNjliM2E2OGYzMjljMTRkNGJmMzVkNDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyYzFhZTU4NDFjZmI1MDM1ZDkwNWQ4YzRlZWZiY2M2NjViMDg2ZmY3ZTQ5NWU0NDk5ZTkyMWY3MDc2NzMzM2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9217670f183435f8ba209a777534bd1",
+      "statement": "The lazy.nvim setup imports explicitly required Kickstart plugin modules and all specifications under lua/custom/plugins/; lua/custom/plugins/init.lua itself returns an empty table.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L1063-L1074",
+          "version": "repo-lines-v1:sha256:bc778efad85881edf437869a9d95588ca7e1c3118dd9fca032eff51a86188eff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYzI1OWQ3ZDA5MGQxNDNlZWYzMDg4ODc0MDU4MzgyOTEzYTJhNTc3NmRlMzVhNmQ5ZjZkNDU5YmM5Mjg2ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5NGM3NzczZmM5OTg4NzIzZWEwMDNjMWUyYTYzODQzMDM0MmQxMDljNWM5MzI2NmI0NTcxZjcxMzFjODA4Y2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljNjNmYzRjZmY2ODAwM2FjMGFmZGE5M2I0YzkzNzBhYjY2NTIzOGU5MTYzN2JmMzUxZGE5MTc4OThiZTcyYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZjI0NWJjNTc3ODFjZDc1NjE1MWZjZWZiNDc2N2FmMzVjM2I1MzM5Yjk2MTE3ZGM2MGY2NWM4MGQ0YTk2M2EifQ"
+        },
+        {
+          "resource": "repo://lua/custom/plugins/init.lua#L1-L5",
+          "version": "repo-lines-v1:sha256:3521fb9ab237042863a7357063d1ce04fdd389e5058ac194846054bfe6380664:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVjNTNlY2I2MGE2OGM3ZDNmZDQ3N2Q4ZDAzYTg5NTljYTQ4ZDNiMDlmM2IxNGMyNTEyMDI3ZThhMTgyZTdhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTIzMmQ4Mzc5ZGU3N2UxNTRjYTUzMzY4OWFmMmU0MjYyOWRkNzU3NGJkYTVhMGEzOTA3OTk4NDlmMDc2MDdjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b32d22606c6247bf9664a438f6f0334b",
+      "statement": "Global user keymaps are loaded from lua/custom/keymaps.lua after lazy.nvim setup, while plugin-local mappings are declared in individual plugin specifications through lazy.nvim's keys field.",
+      "evidence": [
+        {
+          "resource": "repo://init.lua#L1095-L1103",
+          "version": "repo-lines-v1:sha256:26b740d1de8688e4cdcd5d22fa3d3171cac02512805b3ef69d56bfecc97ab8e1:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk3N2NjNGViZjc0OTVlNGM2NWM0YjdjMmYyMWQ5YmNhNTk4YTQ4NmRhNmEyNjA1YzZlNzVlMjg0ZmZlMDQ2NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzAxN2IzMjNmOTZlMThjNTMyMTBiZjFiOTdlNDczYzY4YzQ3Nzc5ZTYxNjUzN2Q0ZjE1YTQyMTZhMmE1MDUzYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWQ0ZDFhMjA0YjEzMmRjNzMyMGE1MzU5NzM3YWNjMTBjNjM5MWQ0YzJmMTA2MGRkMDhkZDhmNDc0NjVhNTYwYyJ9"
+        },
+        {
+          "resource": "repo://lua/custom/keymaps.lua#L1-L14",
+          "version": "repo-lines-v1:sha256:80e59654dcb8353cba08f828810e673ac461a3e9faff84390fb820e31f350158:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzYzM0NjExZGM0YjA5ODllNWNiMmZhOTgwZDUyY2QzMDRmNjMxNzlhMDI1ZTFhZjhlMjQ2NGU0NjhjYjE2YWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzMGQ2YTc4MTI3YWJhNDFhNTgwZDMwZWE5ZGNkMTRmZDRhYjk1YzAxNmUwNzI1NzJmNDUwYzVhZTY3MzIwZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0ZjQwNzIyNDhkYjcwZWYxN2NhZmFhM2NkNmUzMzhlM2Q2NDFmYjk5ZmE5ODUwY2NjN2IyZWFmZjUyOWZhNmQifQ"
+        },
+        {
+          "resource": "repo://lua/custom/plugins/bufferline.lua#L1-L16",
+          "version": "repo-lines-v1:sha256:fa216f9cec303d3e2ab9fe86b2b7862f7b9a7da2136d690c2bb64f7c2b8da224:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkMmE2MjcyOGEyZDY3MDBmNmYxNTE0ODY3OGE3ZDE4ZjQ0OWJhMWViNGY2Njc4ZmZiODA5N2RhZWU4NDk1N2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMGNkYjk3MmE3YmZiN2VkMjQ2ZjlmZjY3MjM4NWU1NWY0OTY4ZmMxMTA0M2RjNWI2ODRkNTFkZmEzMWRiY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0YjdiZjM3MjI0ZjRkMDc2ZGJkOThhY2I1ZWY2YzJlMWVmZWU3Y2M1MTk2YzViODIwYWY1OWQwZGE1N2U1YjQifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-10-02T19:21:58.828Z"
+  }
+}
