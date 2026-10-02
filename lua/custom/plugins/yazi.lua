@@ -1,5 +1,7 @@
 return {
   'mikavilpas/yazi.nvim',
+  -- Disabled: plugin not updating / not working properly
+  enabled = false,
   event = 'VeryLazy',
   dependencies = {
     { 'nvim-lua/plenary.nvim', lazy = true },
